@@ -116,7 +116,7 @@ proc portinstall::create_archive {location archive.type} {
             }
         }
         t(ar|bz|lz|xz|gz) {
-            set tar "tar"
+            set tar "gnutar"
             if {[catch {set tar [findBinary $tar ${portutil::autoconf::tar_path}]} errmsg] == 0} {
                 ui_debug "Using $tar"
                 set archive.cmd "$tar"

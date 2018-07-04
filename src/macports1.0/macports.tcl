@@ -2664,7 +2664,7 @@ proc mportsync {{optionslist {}}} {
                     }
 
                     # extract tarball and move into place
-                    set tar [macports::findBinary tar $macports::autoconf::tar_path]
+                    set tar [macports::findBinary gnutar $macports::autoconf::tar_path]
                     file mkdir ${destdir}/tmp
                     set tar_cmd "$tar -C ${destdir}/tmp -xf $tarball"
                     try -pass_signal {
